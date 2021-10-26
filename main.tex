@@ -1,0 +1,448 @@
+%!TEX TS-program = xelatex
+
+\PassOptionsToPackage{inline}{enumitem}
+
+% Options:
+% - online: uses "fake" letters for @ and . to avoid spam when posting the
+%   resume on a webpage
+% - print: prints more information (address, phone number, etc) that you may not
+%   put in an online version of this document (also uses less color)
+% - extended: use if you have stuff within \ifextended environments, to print
+%   out more information when you want to
+% - colorful: forces the use of colors also for the print version
+% - en/it/fr/de/etc: determine the language of this document
+\documentclass[a4paper,en,print,colorful,extended,forcepublist]{adcv-template/adcv}
+
+\usepackage[english,italian]{babel}
+\usepackage{nth}
+\usepackage{xspace}
+
+\newcommand{\positionheading}[4]{
+\ifextended
+  \adcvrowtwo{\textbf{#2}}{#1}
+  \adcvrowtwo{#3}{}
+  \ifx#4\empty\else
+  \adcvrowtwo{#4}{}
+  \fi
+\else
+  \adcvrowtwo{\textbf{#2}, #3}{#1}
+\fi
+}
+
+\newcommand{\positionheadinglong}[4]{
+\ifextended
+  \adcvrowtwo{\textbf{#2}}{#1}
+  \adcvrowtwo{#3}{}
+  \ifx#4\empty\else
+  \adcvrowtwo{#4}{}
+  \fi
+\else
+  \adcvrowtwo{\textbf{#2}}{#1}
+  \adcvrowtwo{#3}{}
+\fi
+}
+
+\newcommand{\unipi}{University of Pisa\xspace}
+\newcommand{\unipisa}{\unipi, Pisa (Italy)\xspace}
+
+\newcommand{\santanna}{Scuola Superiore Sant'Anna\xspace}
+\newcommand{\santannapisa}{\santanna, Pisa (Italy)\xspace}
+
+\newcommand{\phd}{Ph.D.\@\xspace}
+\newcommand{\philod}{Philosophiae Doctor (\phd)\xspace}
+
+\newcommand{\msc}{M.Sc.\@\xspace}
+\newcommand{\mastersc}{Master of Science (\msc)\xspace}
+
+\newcommand{\bsc}{M.Sc.\@\xspace}
+\newcommand{\bachelorsc}{Bachelor of Science (\bsc)\xspace}
+
+\newcommand{\tomcucinotta}{\href{https://retis.santannapisa.it/~tommaso}{Prof.\ Tommaso Cucinotta}\xspace}
+
+
+\title{Gabriele Ara’s CV}
+
+\adcvname{Gabriele}{Ara}{Eng}
+\adcvtitle{Embedded Systems, Real-Time Systems, System Programming, Research}
+\adcvaddress{Piazza Due Giugno 15}{57122}{Livorno}{Italy}
+\adcvwebsite{https://gabrieleara.github.io}{gabrieleara.github.io}
+\adcvemail{gabriele.ara}{santannapisa}{it}
+\adcvphone{(+39) 338 419 1704}
+\adcvdate{May 2021}
+
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+Gabriele Ara is a \phd Student at \santannapisa. He has more than 10 years of
+experience in system programming.
+
+% \ifextended
+  Gabriele’s expertise spans across multiple fields in Computer and Software
+  Engineering, as well as IT, including embedded systems, real-time systems,
+  scheduling, computer architectures, software design and implementation, system
+  programming, networking, and research.
+
+  He is currently a proud member of the Real-Time Systems Lab at \santanna under
+  the supervision of \tomcucinotta, and his research interests include
+  energy-aware scheduling of real-time systems on embedded platforms running
+  Linux, high-performance network communications in cloud environments, and the
+  simulation of multi-core real-time systems.
+
+  Gabriele has a \bsc in Computer Engineering (cum laude) from \unipisa, and a
+  \msc in Embedded Computing Systems Engineering (cum laude), a course jointly
+  offered by \unipi and \santannapisa.
+% \fi
+
+Gabriele speaks fluently Italian and English (almost) alike. His colleagues
+describe him as analytical, creative, competitive, and goal-oriented.
+
+\section{Current Position}
+\begin{adcvtabletwo}
+  \positionheading
+    {2019--Present}
+    {\phd Student}
+    {\santannapisa}
+    {\url{www.santannapisa.it}}
+  \adcvrowtwo{Supervisor: \tomcucinotta}{}
+  \adcvrowmulti{Research topics include
+    \begin{itemize*}[afterlabel= , label=]
+      \item Energy-Aware Scheduling of Real-Time Tasks,
+      \item Dynamic Voltage and Frequency Scaling (DVFS) on Embedded Platforms,
+      \item Real-Time Systems Simulation and Scheduling,
+      \item High-Performance Networking Frameworks,
+    \end{itemize*}
+  }
+\end{adcvtabletwo}
+
+% \newcommand*{\hib}{Bergen University College}
+% \newcommand*{\uib}{University of Bergen}
+% \newcommand*{\uniaq}{Universit{\`a} degli Studi dell’Aquila}
+
+\section{Experience}\label{sec:experience}
+
+\begin{adcvtabletwo}
+  \positionheading
+    {2013--Present}
+    {Textbook Author}
+    {Zanichelli editore S.p.A (Italy)}
+    {\url{www.zanichelli.it}}
+  %
+  \adcvrowmulti{Gabriele writes from time to time chapters and sections IT
+    texbooks in Italian. The chapters focus on the essentials of mobile
+    application development for Android OS, from the very basics to more
+    advanced use-case examples. The complete list of textbooks to which Gabriele
+    collaborated is in \hyperref[sec:bookchapters]{Book Chapters}.}
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \positionheadinglong
+    {2018--2019}
+    {High-School Teaching Professional}
+    {Istituto di Istruzione Superiore "Vespucci-Colombo", Livorno (Italy)}
+    {\url{vespucci.edu.it}}
+  %
+  \adcvrowmulti{Part-time professor in an Italian high-school, teaching IT and
+    IT Laboratory both \nth{10} and \nth{11} grade students.}
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \positionheading
+    {2017--2018}
+    {E-learning Technical Specialist}
+    {\unipisa}
+    {\url{www.unipi.it}}
+  %
+  \adcvrowmulti{On-site support to technical and teaching personnel for the
+    University with respect to practical aspects of live streaming classes and
+    conferences, and the post-production of videos of an e-learning platform.
+    This includes the management of recording equipment, streaming software, and
+    hands-on support in case of live failures.}
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \positionheading
+    {2013--2018}
+    {Tutor}
+    {Independent Contractor, Livorno (Italy)}
+    {}
+  %
+  \adcvrowmulti{Throughout university years I managed to help some high school
+    students in STEM fields as their tutor, helping them with assignments in
+    classes such as Computer Engineering, IT, Math, Electronics, and Physics.}
+
+
+  %----------------------------------------------------------------------------%
+
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\ifextended
+\clearpage
+\else
+\fi
+
+\section{Awards}\label{sec:awards}
+\begin{adcvtabletwo}
+  \adcvrowtwo{\textbf{Best Paper Award}}{2020} \adcvrowmulti{Gabriele Ara,
+  Tommaso Cucinotta, Luca Abeni, Carlo Vitucci, "\textit{\textbf{Comparative
+  Evaluation of Kernel Bypass Mechanisms for High-performance Inter-container
+  Communications}}", in Proceedings of \nth{10} Conference on Cloud Computing
+  and Service Science (CLOSER)}
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\ifextended
+\else
+\clearpage
+\fi
+\section{Education}\label{sec:education}
+
+\begin{adcvtabletwo}
+  \adcvrowtwo{\textbf{Master of Science (M.Sc.)} in Embedded Computing Systems}{2019}
+  \adcvrowtwo{\unipi{} {\linktext \textbf{and}} \santannapisa}{}
+  %
+  \ifextended
+    \adcvrowmulti{
+      Specialized curriculum in system programming, embedded and real-time
+      systems, mechatronics, computer architectures and component frameworks.
+      %
+      Final grade: \textit{Summa cum laude}. Subject of the dissertation: {\em
+      Design and Implementation of a Performance Testing Framework for
+      High-Performance Inter-Container Communications}. Supervisor: {\em
+      \tomcucinotta}.
+    }
+  \fi
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \adcvrowtwo{\textbf{Bachelor of Science (B.Sc.)} in Computer Engineering}{2016}
+  \adcvrowtwo{\unipisa}{}
+  %
+  \ifextended
+    \adcvrowmulti{
+      Specialized curriculum in computer science and engineering, computer
+      architectures, system programming, industrial automation and control
+      systems.
+      %
+      Final grade: \textit{Summa cum laude}. Subject of the dissertation (in
+      Italian): {\em Dynamic and Interactive Crisis Mapping and Generation}.
+      Supervisor: {\em Prof.\ Marco Avvenuti}.
+    }
+  \fi
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \adcvrowtwo{\textbf{Secondary Diploma} as IT Professional}{2013}
+
+  \adcvrowtwo{Istituto Tecnico Industriale Statale G.\ Galilei, Livorno (Italy)}{}
+  \ifextended
+  \adcvrowtwo{\url{www.galileilivorno.gov.it}}{}
+  \fi
+  %
+  \ifextended
+    \adcvrowmulti{
+      Curriculum in computer science, programming patterns, web technologies,
+      mobile app development, networking, and system programming.
+      %
+      Final grade: \textit{100/100}.
+    }
+  \fi
+
+  %----------------------------------------------------------------------------%
+
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\section{Supervision}\label{sec:supervision}
+\begin{adcvtabletwo}
+  \adcvrowtwo{\textbf{Leonardo Lai}}{2019}
+  \ifextended
+    \adcvrowtwo{Master student in Embedded Computing Systems}{}
+    \adcvrowtwo{\santannapisa}{}
+  \else
+  \adcvrowtwo{Master student in Embedded Computing Systems, \santannapisa}{}
+  \fi
+  %
+  \adcvrowmulti{Subject of the dissertation: {\em Implementation and Evaluation
+  of High-Performance Userspace Networking Mechanisms for Virtualized Network
+  Functions}}
+
+  %----------------------------------------------------------------------------%
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\section{Professional Skills}\label{sec:skills}
+
+\newcommand*{\lang}[1]{{\linktext \textbf{#1}}\xspace}
+% \multicolumn{2}{@{}p{\textwidth}}{\lighttext #1}\tabularnewline
+
+\begin{adcvtabletwo}
+  \adcvrowmultifake{\textbf{Communication skills} Comfortable interacting with
+    people with a cross cultural backgrounds from around the world. Gave
+    presenations to moderate international audiences and workshops. Can
+    communicate strength and weaknesses of his own work.}
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \adcvrowmultifake{\textbf{Organisational/Managerial skills} Can both work in
+    small teams and manage to get things done by himself. Comfortable leading
+    other people when necessary to organize the work.}
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  \adcvrowskip
+  \adcvrowtwo{\large \textbf{Job-related skills}}{}
+  \adcvrowskip
+  \adcvrowmulti{Following is the list of known programming languages and tools
+  organized by proficiency level.}
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{Excellent knowledge and proficiency:}}{}
+  \adcvrowmulti{
+    \begin{itemize}
+      \item \lang{C/C++}, including the understanding of language internals,
+      standard libraries, POSIX, Linux-specific libraries, Linux system
+      programming, CORBA, microcontrollers programming.
+    \end{itemize}
+  }
+
+  \adcvrowtwo{\textbf{Proficient knowledge:}}{}
+  \adcvrowmulti{
+    \begin{itemize}
+      \item \lang{Linux kernel} internals and hacking;
+      \item \lang{Virtualization} technologies, including Docker, LXC, LXD, and
+      custom solutions based on {\em cgroups} and {\em namespaces};
+      \item \lang{High-performance Networking} frameworks, including DPDK, FD.io
+      VPP, Open vSwitch;
+      \item \lang{Unix}-based systems command line, scripting in \lang{Sh} and
+        \lang{Bash};
+      \item \lang{Java} (standard libraries, JavaFX, Spring);
+      \item \lang{Android} App programming (using Java+XML);
+      \item \lang{JavaScript} (standard libraries, JQuery, D3);
+    \end{itemize}
+  }
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{Good knowledge:}}{}
+  \adcvrowmulti{
+    \begin{itemize}
+      \item \lang{Matlab} and Simulink for scripting, data analysis, and system control or simulation;
+      \item \lang{Web} development using HTML5, PHP5, CSS3, XML, JSON, REST patterns;
+      \item \lang{SQL} and MySQL software suite;
+      \item \lang{CISCO} technologies and CISCO IOS;
+    \end{itemize}
+  }
+  \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\section{Languages}\label{sec:languages}
+
+\ifextended
+  \begin{adcvlanguages}
+    \adcvmothertongue{Italian}
+    \adcvlanguagesheader
+    \adcvlanguage{2}{English}{\adcvCTwo}{\adcvCTwo}{\adcvCTwo}{\adcvCOne}{\adcvCTwo}
+    \adcvlanguagesfooter
+    \adcvlanguagesfootnote{2}{2012 -- Trinity's Graded Examinations in Spoken English - Grade 7 (CEFR B2)}
+  \end{adcvlanguages}
+\else
+  \textbf{Italian}: Native proficiency
+
+  \textbf{English}: Full professional proficiency
+\fi
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\section{Personal Interests}\label{sec:interests}
+
+Science, Technology, Traveling, Playing and Listening to Music, Food, Movies,
+Trekking
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\ifextended
+% \clearpage
+\else
+\ifpublist
+\clearpage
+\fi
+\fi
+\section{Publications}\label{sec:publications}
+
+\newcommand{\fullpublicationslist}{
+  \begin{refsection}
+    \nocite{Ara20CCIS}
+    \printbibliography[title={Peer-reviewed Journals\label{sec:journals}}, heading=subbibliography]
+  \end{refsection}
+
+  \begin{refsection}
+    \nocite{Serra20}
+    \nocite{Ara20CLOSER}
+    \nocite{Ara19}
+    \printbibliography[title={Peer-reviewed Conference and Workshop Proceedings\label{sec:conferences}}, heading=subbibliography]
+  \end{refsection}
+
+  \begin{refsection}
+    \nocite{MC2020}
+    \nocite{MF2017}
+    \nocite{MC2015}
+    \nocite{MF2014}
+    \printbibliography[title={Book Chapters\label{sec:bookchapters}}, heading=subbibliography]
+  \end{refsection}
+}
+
+\ifextended
+  \fullpublicationslist
+\else
+  \ifpublist
+    \fullpublicationslist
+  \else
+    Search me on
+    \href{htts://scholar.google.com/citations?user=nl1RmecAAAAJ}{Google Scholar}
+    for the list of my peer-reviewed conference proceedings and journals. Or
+    have a look at \href{https://gabrieleara.github.io/publications}{my
+    publications page}.
+  \fi
+\fi
+
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\ifextended
+\section{Presentations}\label{sec:presentations}
+
+\begin{adcvpresentations}
+  \adcvpresentation{On the Use of Kernel Bypass Mechanisms for High-Performance
+    Inter-container Communications}{Frankfurt, Germany, June 20, 2019}
+
+  \adcvpresentation{\href{https://www.youtube.com/watch?v=cQ3ecv6TVZc}{Comparative
+    Evaluation of Kernel Bypass Mechanisms for High-performance Inter-container
+    Communications}}{[Online] Prague, Czech Republic, May 7, 2020}
+\end{adcvpresentations}
+\fi
+
+\end{document}
