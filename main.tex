@@ -9,9 +9,10 @@
 %   put in an online version of this document (also uses less color)
 % - extended: use if you have stuff within \ifextended environments, to print
 %   out more information when you want to
-% - colorful: forces the use of colors also for the print version
+% - colorlinks: colorize links
+% - colorbar: colorize top bar on first page
 % - en/it/fr/de/etc: determine the language of this document
-\documentclass[a4paper,en,print,online]{adcv-template/adcv}
+\documentclass[a4paper,en,print,extended]{adcv-template/adcv}
 
 \usepackage[english,italian]{babel}
 \usepackage{nth}
@@ -292,12 +293,12 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \adcvrowmultifake{\textbf{Communication skills} Comfortable interacting with
     people with cross-cultural backgrounds from around the world. Gave
     presentations to moderate international audiences for conferences and
-    workshops. He can communicate strengths and weaknesses of his work.}
+    workshops. Can communicate strengths and weaknesses of his work.}
   \adcvrowskip
 
   %----------------------------------------------------------------------------%
 
-  \adcvrowmultifake{\textbf{Organisational/Managerial skills} He can both work
+  \adcvrowmultifake{\textbf{Organisational/Managerial skills} Can both work
     in small teams and manage to get things done by himself. Comfortable leading
     other people when necessary to organize the work. Excellent debugging and
     investigative skills for software/computer systems.}
@@ -372,6 +373,7 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \end{adcvlanguages}
 \else
   \textbf{Italian}: Native proficiency
+
   \textbf{English}: Full professional proficiency
 \fi
 
@@ -398,8 +400,8 @@ Trekking
 
 \newcommand{\fullpublicationslist}{
   \begin{refsection}
-    \nocite{Ara20CCIS}
     \nocite{Serra21JSA}
+    \nocite{Ara20CCIS}
     \printbibliography[title={Peer-reviewed Journals\label{sec:journals}}, heading=subbibliography]
   \end{refsection}
 
@@ -447,9 +449,10 @@ Trekking
   \adcvpresentation{On the Use of Kernel Bypass Mechanisms for High-Performance
     Inter-container Communications}{Frankfurt, Germany, June 20, 2019}
 
-  \adcvpresentation{\href{https://www.youtube.com/watch?v=cQ3ecv6TVZc}{Comparative
-    Evaluation of Kernel Bypass Mechanisms for High-performance Inter-container
-    Communications}}{[Online] Prague, Czech Republic, May 7, 2020}
+  \adcvpresentation{Comparative Evaluation of Kernel Bypass Mechanisms for
+    High-performance Inter-container Communications}{
+      \href{https://www.youtube.com/watch?v=cQ3ecv6TVZc}{[Online on YouTube]}
+    Prague, Czech Republic, May 7, 2020}
 \end{adcvpresentations}
 \fi
 
