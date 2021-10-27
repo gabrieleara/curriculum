@@ -27,9 +27,9 @@ COLOR_OPTS=(
 )
 
 CONTENT_NAMES=(
-  '-cv'
-  '-cv-pubs'
   '-resume'
+  '-resume-pubs'
+  '-cv'
 )
 
 CONTENT_OPTS=(
