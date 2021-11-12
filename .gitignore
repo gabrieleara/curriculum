@@ -180,4 +180,5 @@ TSWLatexianTemp*
 *~[0-9]*
 
 # All generated pdf files in root
-/*.pdf
+/main.pdf
+/cvs/*.pdf
