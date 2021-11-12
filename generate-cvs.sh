@@ -55,7 +55,8 @@ for o in $(seq "${#ONLINE_NAMES[@]}"); do
       sed -i "s#^\\\\documentclass.*#${documentclass}#" main.tex
       make &>/dev/null
       make &>/dev/null
-      cp main.pdf "$outname"
+      mkdir -p cvs
+      cp main.pdf "cvs/$outname"
     done
   done
 done
