@@ -40,6 +40,13 @@ CONTENT_OPTS=(
   ',extended'
 )
 
+
+echo "Current directory"
+pwd
+
+echo "Listing everything"
+ls -al
+
 for o in $(seq "${#ONLINE_NAMES[@]}"); do
   online_name="${ONLINE_NAMES[$((o - 1))]}"
   online_opt="${ONLINE_OPTS[$((o - 1))]}"
