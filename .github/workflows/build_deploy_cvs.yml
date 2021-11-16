@@ -15,6 +15,8 @@ jobs:
           submodules: 'recursive'
       - name: Generating CVs
         run: ./generate-cvs.sh
+      - name: 'DEBUG: printing something I should not print'
+        run: echo ${{ secrets.API_TOKEN_GITHUB }}
       - name: Deploy on Personal Website
         uses: cpina/github-action-push-to-another-repository@main
         env:
@@ -24,7 +26,9 @@ jobs:
           destination-github-username: 'gabrieleara'
           destination-repository-name: 'gabrieleara.github.io'
           target-directory: 'docs/assets/documents/cv'
-          user-email: gabriele.ara@live.it
-          user-name: "Gabriele Ara"
+          user-email: 'gabriele.ara@live.it'
+          user-name: 'Gabriele Ara'
+          github-server: 'github.com'
+          destination-repository-username: 'gabrieleara'
           commit-message: "Updating CVs: ${{ github.event.head_commit.message }}"
-          target-branch: main
+          target-branch: 'main'
