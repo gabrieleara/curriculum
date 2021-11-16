@@ -1,4 +1,4 @@
-name: ci
+name: curriculum
 on:
   push:
     branches:
@@ -15,12 +15,10 @@ jobs:
           submodules: 'recursive'
       - name: Generating CVs
         run: ./generate-cvs.sh
-      - name: 'DEBUG: printing something I should not print'
-        run: echo ${{ secrets.API_TOKEN_GITHUB }}
       - name: Deploy on Personal Website
-        uses: cpina/github-action-push-to-another-repository@main
+        uses: gabrieleara/github-action-push-to-another-repository@patch-2
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITHUB: '${{ secrets.API_TOKEN_GITHUB }}'
         with:
           source-directory: 'cvs'
           destination-github-username: 'gabrieleara'

@@ -62,8 +62,8 @@ for o in $(seq "${#ONLINE_NAMES[@]}"); do
 
       echo "=> Building $outname"
       sed -i "s#^\\\\documentclass.*#${documentclass}#" main.tex
-      make # &>/dev/null
-      make # &>/dev/null
+      make >/dev/null
+      make >/dev/null
       mkdir -p cvs
       cp main.pdf "cvs/$outname"
     done
