@@ -5,8 +5,8 @@ on:
       - master
       - main
 jobs:
-  deploy:
-    runs-on: gabrieleara/dev_environment:latex
+  compile_and_deploy:
+    container: gabrieleara/dev_environment:latex
     steps:
       - name: Checkout
         uses: actions/checkout@v2
