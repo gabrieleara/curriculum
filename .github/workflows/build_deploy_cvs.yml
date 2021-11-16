@@ -15,6 +15,8 @@ jobs:
           submodules: 'recursive'
       - name: Generating CVs
         run: ./generate-cvs.sh
+        env:
+          CV_ONLINE_ONLY: '1'
       - name: Deploy on Personal Website
         uses: gabrieleara/github-action-push-to-another-repository@patch-2
         env:

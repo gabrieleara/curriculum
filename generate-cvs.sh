@@ -40,12 +40,11 @@ CONTENT_OPTS=(
   ',extended'
 )
 
-
-echo "Current directory"
-pwd
-
-echo "Listing everything"
-ls -al
+if [ "${CV_ONLINE_ONLY}" = '1' ]; then
+  echo '[+] Building only ONLINE versions!'
+  ONLINE_NAMES=("${ONLINE_NAMES[@]:1}")
+  ONLINE_OPTS=("${ONLINE_OPTS[@]:1}")
+fi
 
 for o in $(seq "${#ONLINE_NAMES[@]}"); do
   online_name="${ONLINE_NAMES[$((o - 1))]}"
@@ -60,7 +59,7 @@ for o in $(seq "${#ONLINE_NAMES[@]}"); do
       outname="${OUTNAME_PREFIX}${online_name}${color_name}${content_name}${OUTNAME_SUFFIX}"
       documentclass="${DOCCLASS_PREFIX}${online_opt}${color_opt}${content_opt}${DOCCLASS_SUFFIX}"
 
-      echo "=> Building $outname"
+      echo "[+] Building $outname"
       sed -i "s#^\\\\documentclass.*#${documentclass}#" main.tex
       make >/dev/null
       make >/dev/null
