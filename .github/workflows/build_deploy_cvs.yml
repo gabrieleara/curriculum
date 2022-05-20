@@ -1,4 +1,4 @@
-name: curriculum
+name: Build and Deploy on Personal Website
 on:
   push:
     branches:
@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: 'recursive'
-      - name: Generating CVs
+      - name: Generate CVs
         run: ./generate-cvs.sh
         env:
           CV_ONLINE_ONLY: '1'
       - name: Deploy on Personal Website
-        uses: gabrieleara/github-action-push-to-another-repository@patch-2
+        uses: gabrieleara/github-action-push-to-another-repository@issue-cpina-68
         env:
           API_TOKEN_GITHUB: '${{ secrets.API_TOKEN_GITHUB }}'
         with:
