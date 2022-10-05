@@ -7,14 +7,14 @@
 %   resume on a webpage
 % - print: prints more information (address, phone number, etc) that you may not
 %   put in an online version of this document (also uses less color)
-% - extended: use if you have stuff within \ifextended environments, to print
+% - extended: use if you have stuff within % \ifextended environments, to print
 %   out more information when you want to
 % - colorlinks: colorize links
 % - colorbar: colorize top bar on first page
 % - en/it/fr/de/etc: determine the language of this document
-\documentclass[a4paper,en,print]{adcv-template/adcv}
+\documentclass[a4paper,en,print,colorbar,colorlinks,extended]{adcv-template/adcv}
 
-\usepackage[english,italian]{babel}
+\usepackage[english]{babel}
 \usepackage{nth}
 \usepackage{xspace}
 
@@ -59,9 +59,9 @@
 \newcommand{\bachelorsc}{Bachelor of Science (\bsc)\xspace}
 
 \newcommand{\tomcucinotta}{\href{https://retis.santannapisa.it/~tommaso}{Prof.\ Tommaso Cucinotta}\xspace}
+\newcommand{\lucabenini}{\href{https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html}{Prof.\ Luca Benini}\xspace}
 
-
-\title{Gabriele Ara’s CV}
+\title{Gabriele Ara's CV}
 
 \adcvname{Gabriele}{Ara}{Eng}
 \adcvtitle{Embedded Systems, Real-Time Systems, System Programming, Research}
@@ -69,40 +69,38 @@
 \adcvwebsite{https://www.gabrieleara.it}{www.gabrieleara.it}
 \adcvemail{gabriele.ara}{santannapisa}{it}
 \adcvphone{(+39) 338 419 1704}
-\adcvdate{October 2021}
+\adcvdate{October 2022}
 
 \addbibresource{biblio.bib}
 
 \begin{document}
 
-Gabriele Ara is a \phd Student at \santannapisa. He has more than 10 years of experience in system programming.
+I am a \phd Student at Scuola Superiore Sant'Anna, Pisa (Italy), and I have
+more than 10 years of experience in system programming.
 
+My expertise spans multiple fields in Computer and Software Engineering and IT,
+including embedded systems, real-time systems scheduling, computer
+architectures, software design and implementation, system programming,
+networking, kernel development, mobile app development, and research.
 
-% \ifextended
-  Gabriele’s expertise spans multiple fields in Computer and Software
-  Engineering and IT, including embedded systems, real-time systems, scheduling,
-  computer architectures, software design and implementation, system
-  programming, networking, and research.
+My research interests include energy-aware scheduling of real-time systems on
+embedded platforms running Linux, high-performance and low latency network
+communications in cloud environments, and the simulation of multi-core real-time
+systems.
 
-  He is currently a proud member of the Real-Time Systems Lab at \santanna under
-  the supervision of \tomcucinotta, and his research interests include
-  energy-aware scheduling of real-time systems on embedded platforms running
-  Linux, high-performance network communications in cloud environments, and the
-  simulation of multi-core real-time systems.
+I have an M.Sc. in Embedded Computing Systems Engineering (cum laude), a course
+jointly offered by the Scuola Superiore Sant'Anna of Pisa and the University of
+Pisa (Italy), and a B.Sc. in Computer Engineering (cum laude) from the
+University of Pisa.
 
-  Gabriele has a \bsc in Computer Engineering (cum laude) from the \unipisa, and
-  an \msc in Embedded Computing Systems Engineering (cum laude), a course
-  jointly offered by the \unipi and \santannapisa.
-% \fi
-
-Gabriele speaks fluently Italian and English (almost) alike. His colleagues
-describe him as analytical, creative, competitive, and goal-oriented.
+I fluently speak Italian and English alike. My colleagues often describe me as
+analytical, creative, competitive, and goal-oriented.
 
 \section{Current Position}
 \begin{adcvtabletwo}
   \positionheading
     {2019--Present}
-    {\phd Student}
+    {International \phd Student}
     {\santannapisa}
     {\url{www.santannapisa.it}}
   \adcvrowtwo{Supervisor: \tomcucinotta}{}
@@ -116,35 +114,46 @@ describe him as analytical, creative, competitive, and goal-oriented.
   }
 \end{adcvtabletwo}
 
-\section{Experience}\label{sec:experience}
+%------------------------------------------------------------------------------%
+
+\section{Research Experience in International Institutions}\label{sec:research}
+\begin{adcvtabletwo}
+  \positionheading
+    {Jan--Jul 2022}
+    {Visiting \phd Research Fellow}
+    {Integrated Systems Laboratory -- ETH Zürich (Switzerland)}
+    {\url{www.iis.ee.ethz.ch}}
+  \adcvrowtwo{Supervisor: \lucabenini}{}
+  \adcvrowmulti{Research topics included
+    \begin{itemize*}[afterlabel= , label=]
+      \item Energy-Aware Scheduling of Real-Time Tasks,
+      \item Dynamic Voltage and Frequency Scaling (DVFS) on Embedded Platforms,
+      \item System Monitoring, and
+      \item Linux Kernel Development,
+    \end{itemize*}
+  }
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+
+\section{Working Experience}\label{sec:experience}
 
 \begin{adcvtabletwo}
   \positionheading
-    {2013--Present}
-    {Textbook Author}
+    {2013--2022}
+    {IT Textbook Author}
     {Zanichelli editore S.p.A (Italy)}
     {\url{www.zanichelli.it}}
   %
-  \adcvrowmulti{Gabriele writes from time to time chapters and sections of IT
-    textbooks in Italian. The chapters focus on mobile application development
-    essentials for Android OS, from the very basics to more advanced use-case
-    examples.
-    % The complete list of textbooks to which Gabriele collaborated is in
-    % \hyperref[sec:bookchapters]{Book Chapters}.
+  \adcvrowmulti{ I worked as a project collaborator and coauthor of several high
+    school textbooks for IT classes. All of the chapters and books I authored
+    focus on the essentials of mobile application development for Android OS,
+    from the basics to more advanced use-case examples.
+    %
+    Refer to the \textbf{\hyperref[sec:books]{Books}} and
+    \textbf{\hyperref[sec:bookchapters]{Book Chapters}} sections for the full
+    list of textbooks I coauthored.
     }
-  \adcvrowskip
-
-  %----------------------------------------------------------------------------%
-
-  \positionheadinglong
-    {2018--2019}
-    {High School Teaching Professional}
-    {Istituto di Istruzione Superiore "Vespucci-Colombo", Livorno (Italy)}
-    {\url{vespucci.edu.it}}
-  %
-  \adcvrowmulti{For one academic year, Gabriele worked as a part-time professor
-    in an Italian high school, teaching IT and IT Laboratory to both \nth{10}
-    and \nth{11}-grade students.}
   \adcvrowskip
 
   %----------------------------------------------------------------------------%
@@ -175,42 +184,20 @@ describe him as analytical, creative, competitive, and goal-oriented.
     school students in STEM fields as their tutor, helping them with assignments
     in classes such as Computer Engineering, IT, Maths, Electronics, and
     Physics.}
+  % \adcvrowskip
 
   %----------------------------------------------------------------------------%
-
 \end{adcvtabletwo}
 
-%------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------%
-
-\ifextended
-\clearpage
-\else
-\fi
-
-\section{Awards}\label{sec:awards}
-\begin{adcvtabletwo}
-  \adcvrowtwo{\textbf{Best Paper Award}}{2020} \adcvrowmulti{Gabriele Ara,
-  Tommaso Cucinotta, Luca Abeni, Carlo Vitucci, for the work
-  "\textit{\textbf{Comparative Evaluation of Kernel Bypass Mechanisms for
-  High-performance Inter-container Communications}}" at the 10th International
-  Conference on Cloud Computing and Services Science (CLOSER), 2020}
-\end{adcvtabletwo}
-
-%------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------%
-
-\ifextended
-\else
-\clearpage
-\fi
 \section{Education}\label{sec:education}
 
 \begin{adcvtabletwo}
+
+% \begin{adcvtabletwo}
   \adcvrowtwo{\textbf{\mastersc} in Embedded Computing Systems}{2019}
   \adcvrowtwo{\unipi{} {\textbf{and}} \santannapisa}{}
   %
-  \ifextended
+  % \ifextended
     \adcvrowmulti{
       Specialized curriculum in system programming, embedded and real-time
       systems, mechatronics, computer architectures and component frameworks.
@@ -220,7 +207,7 @@ describe him as analytical, creative, competitive, and goal-oriented.
       High-Performance Inter-Container Communications}. Supervisor: {\em
       \tomcucinotta}.
     }
-  \fi
+  % \fi
   \adcvrowskip
 
   %----------------------------------------------------------------------------%
@@ -228,7 +215,7 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \adcvrowtwo{\textbf{\bachelorsc} in Computer Engineering}{2016}
   \adcvrowtwo{\unipisa}{}
   %
-  \ifextended
+  % \ifextended
     \adcvrowmulti{
       Specialized curriculum in computer science and engineering, computer
       architectures, system programming, industrial automation and control
@@ -238,7 +225,7 @@ describe him as analytical, creative, competitive, and goal-oriented.
       Italian): {\em Dynamic and Interactive Crisis Mapping and Generation}.
       Supervisor: {\em Prof.\ Marco Avvenuti}.
     }
-  \fi
+  % \fi
   \adcvrowskip
 
   %----------------------------------------------------------------------------%
@@ -246,35 +233,104 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \adcvrowtwo{\textbf{Secondary Diploma} as IT Professional}{2013}
 
   \adcvrowtwo{Istituto Tecnico Industriale Statale G.\ Galilei, Livorno (Italy)}{}
-  \ifextended
+  % \ifextended
   \adcvrowtwo{\url{www.galileilivorno.gov.it}}{}
-  \fi
+  % \fi
   %
-  \ifextended
+  % \ifextended
     \adcvrowmulti{
       Curriculum in computer science, programming patterns, web technologies,
       mobile app development, networking, and system programming.
       %
       Final grade: \textit{100/100}.
     }
-  \fi
-
-  %----------------------------------------------------------------------------%
+  % \fi
 
 \end{adcvtabletwo}
 
-%------------------------------------------------------------------------------%
+\section{International Awards for Research Activities}\label{sec:awards}
+\begin{adcvtabletwo}
+  \adcvrowtwo{\textbf{Best Paper Award}}{2020} \adcvrowmulti{Gabriele Ara,
+  Tommaso Cucinotta, Luca Abeni, Carlo Vitucci, for the work
+  "\textit{\textbf{Comparative Evaluation of Kernel Bypass Mechanisms for
+  High-performance Inter-Container Communications}}" at the 10th International
+  Conference on Cloud Computing and Services Science (CLOSER), 2020}
+\end{adcvtabletwo}
+
+\section{Participation in Projects}\label{sec:projects}
+
+\begin{adcvtabletwo}
+\positionheadinglong
+    {2020--present}
+    {AMPERE}
+    {A Model-driven development framework for highly Parallel and EneRgy-Efficient computation supporting multi-criteria optimisation}
+    {\url{www.ampere-euproject.eu}}
+    %
+    \adcvrowmulti{Project funded by the European Union under grant agreement
+      no.\ 871669. AMPERE envisages the development of novel methods and tools
+      for constructing accurate models of proposed systems in computing
+      platforms. Thus, system constraints are efficiently dealt with, while
+      ensuring performance targets are met. AMPERE's computing software will
+      also help improve overall system efficiency along with fulfilment of
+      non-functional requirements. Contribution: I authored two publications
+      related to the project. Personal research activities focus on the modeling
+      of real-time tasks on embedded platform, real-time scheduling of complex
+      task graphs, heterogeneous architectures, system monitoring, and kernel
+      development. }
+
+\end{adcvtabletwo}
 %------------------------------------------------------------------------------%
 
-\section{Supervision}\label{sec:supervision}
+\section{Teaching Experience}\label{sec:teaching}
 \begin{adcvtabletwo}
-  \adcvrowtwo{\textbf{Leonardo Lai}}{2019}
-  \ifextended
+
+  \positionheadinglong
+    {2018--2019}
+    {High School Teaching Professional}
+    {Istituto di Istruzione Superiore ``Vespucci-Colombo'', Livorno (Italy)}
+    {\url{vespucci.edu.it}}
+    %
+    \adcvrowmulti{For one academic year, I worked as a part-time professor (16~h
+      per week) in an Italian high school, teaching IT and IT Laboratory to both
+      \nth{10} and \nth{11}-grade students.}
+    % \adcvrowskip
+
+  %----------------------------------------------------------------------------%
+
+  % \positionheadinglong
+  %   {2020}
+  %   {Teacher}
+  %   {\santannapisa}
+  %   {3~h}
+  %   %
+  %   \adcvrowskip
+
+\end{adcvtabletwo}
+
+\subsection{}{Supervision of \msc Students}
+\label{sec:supervision}
+
+\begin{adcvtabletwo}
+
+  \adcvrowtwo{\textbf{Jacopo Malvatani}}{2021}
+  % \ifextended
     \adcvrowtwo{Master student in Embedded Computing Systems}{}
     \adcvrowtwo{\santannapisa}{}
-  \else
+  % \else
   \adcvrowtwo{Master student in Embedded Computing Systems, \santannapisa}{}
-  \fi
+  % \fi
+  %
+  \adcvrowmulti{Subject of the dissertation: {\em Enabling DPDK-based
+  communications in MySQL for high-performance NFV applications}}
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{Leonardo Lai}}{2020}
+  % \ifextended
+    \adcvrowtwo{Master student in Embedded Computing Systems}{}
+    \adcvrowtwo{\santannapisa}{}
+  % \else
+  \adcvrowtwo{Master student in Embedded Computing Systems, \santannapisa}{}
+  % \fi
   %
   \adcvrowmulti{Subject of the dissertation: {\em Implementation and Evaluation
   of High-Performance Userspace Networking Mechanisms for Virtualized Network
@@ -283,8 +339,174 @@ describe him as analytical, creative, competitive, and goal-oriented.
   %----------------------------------------------------------------------------%
 \end{adcvtabletwo}
 
+
+%------------------------------------------------------------------------------%
+
+% \clearpage
+
+
+%------------------------------------------------------------------------------%
+
+% \ifextended
+% \clearpage
+% \else
+% \fi
+
+
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
+
+% \ifextended
+% \else
+% \clearpage
+% \fi
+% \section{Education}\label{sec:education}
+% \end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\section{Professional Service as Reviewer}\label{sec:reviews}
+\begin{adcvtabletwo}
+  \adcvrowmultifake{\textbf{Secondary Reviewer for International Conferences}:
+    ISORC 2020, ISORC 2021, RTCSA 2021, RTSS 2022.}
+\end{adcvtabletwo}
+
+\section{Certificates}\label{sec:certificates}
+\begin{adcvtabletwo}
+  \adcvrowtwo{\textbf{Professional Engineer Abilitation by the Italian Engineering Society}}{2020}
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{CCNA Exploration}: Accessing the WANs, Certificate of Course Completion}{2013}
+  \adcvrowtwo{\textbf{CCNA Exploration}: LAN Switching and Wireless, Certificate of Course Completion}{}
+  \adcvrowtwo{\textbf{CCNA Exploration}: Routing Protocols and Concepts, Certificate of Course Completion}{}
+  \adcvrowtwo{\textbf{CCNA Exploration}: Network Fundamentals, Certificate of Course Completion}{}
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{Europen Computer Driving License (ECDL)}}{2012}
+  \adcvrowskip
+
+  \adcvrowtwo{\textbf{Trinity's Graded Examinations in Spoken English} -- Grade 7 (CEFR B2)}{2012}
+  \adcvrowskip
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+
+\section{Presentations and Seminars}\label{sec:presentations}
+
+\begin{adcvtabletwo}
+  \adcvrowtwo{``\textbf{Log4Shell: the dangers of hidden complexity and unsafe defaults}''}{2022}
+  \adcvrowmulti{Seminar, Pisa, Oct 4, 2022}
+  \adcvrowskip
+
+  \adcvrowtwo{``\textbf{Simulating Execution Time and Power Consumption of Real-Time
+    Tasks on Embedded Platforms}'' \href{https://www.youtube.com/watch?v=hdNFtkSmIG4}{[Online on YouTube]}}{2022}
+    \adcvrowmulti{Presentation for SAC 2022 Conference, April 25, 2022}
+  \adcvrowskip
+
+  \adcvrowtwo{``\textbf{High-Performance Networking for Cloud and NFV Scenarios}''}{2021}
+  \adcvrowmulti{Presentation of research activities for Ericsson (Sweden), May 28, 2021}
+  \adcvrowskip
+
+  \adcvrowtwo{``\textbf{Comparative Evaluation of Kernel Bypass Mechanisms for
+    High-performance Inter-Container Communications}'' \href{https://www.youtube.com/watch?v=cQ3ecv6TVZc}{[Online on YouTube]}}{2020}
+  \adcvrowmulti{Presentation for CLOSER 2020 Conference, Prague, Czech Republic, May 7, 2020}
+  \adcvrowskip
+
+  \adcvrowtwo{``\textbf{On the Use of Kernel Bypass Mechanisms for High-Performance
+    Inter-Container Communications}''}{2019}
+  \adcvrowmulti{Presentation for VHPC 2019 Workshop, Frankfurt, Germany, June 20, 2019}
+  % \adcvrowskip
+\end{adcvtabletwo}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Dissemination Activities}\label{sec:dissemination}
+\begin{adcvtabletwo}
+  \adcvrowtwo{``\textbf{Effects of latency on real-time multimedia applications}''}{2021}
+  \adcvrowtwo{Dissemination Activity (Italian)}{}
+  \adcvrowtwo{Duration: 5~h}{}
+  \adcvrowmulti{Demonstration as part of the BRIGHT initiative on behalf of \santannapisa.}
+  \adcvrowskip
+
+  \adcvrowtwo{``\textbf{Il (non) ruolo del Sistema Operativo nelle
+    elaborazioni distribuite ad alte prestazioni}''}{2020}
+  \adcvrowtwo{Orientation Seminar (Italian)}{}
+  \adcvrowtwo{Duration: 2~h}{}
+  \adcvrowmulti{Orientation to high school students for \santannapisa. The talk
+    describes what is the role of having an OS in a modern machine and how this
+    can impact the performance of critical systems in cloud scenarios.}
+
+\end{adcvtabletwo}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+% \ifextended
+% \vspace{3em}
+% \clearpage
+% \else
+% \ifpublist
+% \clearpage
+% \fi
+% \fi
+\section{Publications}\label{sec:publications}
+
+\newcommand{\fullpublicationslist}{
+  \begin{refsection}
+    \nocite{Serra21JSA}
+    \nocite{Ara20CCIS}
+    \printbibliography[title={Peer-reviewed Journals\label{sec:journals}}, heading=subbibliography]
+  \end{refsection}
+
+  \clearpage
+
+  \begin{refsection}
+    \nocite{Ara2022Simulating}
+    \nocite{Lai21IEEENFVSDN}
+    \nocite{Serra20}
+    \nocite{Ara20CLOSER}
+    \nocite{Ara19}
+    \printbibliography[title={Peer-reviewed Conference and Workshop Proceedings\label{sec:conferences}}, heading=subbibliography]
+  \end{refsection}
+
+  % \ifextended
+  % \clearpage
+  % \fi
+
+  \begin{refsection}
+    \nocite{MF2022}
+    \printbibliography[title={Books\label{sec:books}}, heading=subbibliography]
+  \end{refsection}
+
+  \begin{refsection}
+    \nocite{MC2020}
+    \nocite{MF2017}
+    \nocite{MC2015}
+    \nocite{MF2014}
+    \printbibliography[title={Book Chapters\label{sec:bookchapters}}, heading=subbibliography]
+  \end{refsection}
+}
+
+% \ifextended
+  \fullpublicationslist
+% \else
+  % \ifpublist
+  %   \fullpublicationslist
+  % % \else
+  %   Search me on
+  %   \href{htts://scholar.google.com/citations?user=nl1RmecAAAAJ}{Google Scholar}
+  %   for the list of my peer-reviewed conference proceedings and journals. Or
+  %   have a look at \href{https://gabrieleara.github.io/publications}{my
+  %   publications page}.
+  % \fi
+% \fi
+
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
 
 \section{Professional Skills}\label{sec:skills}
 
@@ -318,9 +540,13 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \adcvrowtwo{\textbf{Excellent knowledge and proficiency:}}{}
   \adcvrowmulti{
     \begin{itemize}
-      \item \lang{C/C++}, including the understanding of language internals,
-      standard libraries, POSIX, Linux-specific libraries, Linux system
-      programming, microcontrollers programming.
+      \item \lang{C++}, including the understanding of language specification
+        and internals, standard libraries, compilers optimization, build and
+        packaging tools, up to the most recent C++ language standard
+        specification (C++20).
+      \item \lang{C}, including the understanding of language internals,
+        standard libraries, POSIX, Linux-specific libraries, Linux system
+        programming, microcontrollers programming.
     \end{itemize}
   }
 
@@ -333,6 +559,8 @@ describe him as analytical, creative, competitive, and goal-oriented.
       VPP, Open vSwitch;
       \item \lang{Linux} management and administrative tools for machine
         configuration and troubleshooting.
+      \item \lang{Linux kernel} internals and hacking, module development,
+        real-time schedulers internals;
       \item \lang{Unix}-based systems command line, scripting in \lang{Sh} and
         \lang{Bash};
       \item \lang{Java} (standard libraries, JavaFX, Spring, Apache and Servlet
@@ -345,12 +573,11 @@ describe him as analytical, creative, competitive, and goal-oriented.
   \adcvrowtwo{\textbf{Good knowledge:}}{}
   \adcvrowmulti{
     \begin{itemize}
-      \item \lang{Linux kernel} internals and hacking;
-      \item \lang{JavaScript} (standard libraries, JQuery, D3);
+      \item \lang{Python} for scripting, data analysis, modeling, and visualization;
       \item \lang{Matlab} and Simulink for scripting, data analysis, and system
-        control or simulation;
-      \item \lang{Web} development using HTML5, PHP5, CSS3, XML, JSON, REST
-        patterns;
+      control or simulation;
+      \item \lang{Web} development using HTML5, PHP5, CSS3, XML, JSON, REST patterns;
+      \item \lang{JavaScript} (standard libraries, JQuery, D3);
       \item \lang{SQL} and MySQL software suite;
       \item \lang{CISCO} technologies and CISCO IOS;
     \end{itemize}
@@ -365,7 +592,7 @@ describe him as analytical, creative, competitive, and goal-oriented.
 
 \section{Languages}\label{sec:languages}
 
-\ifextended
+% \ifextended
   \begin{adcvlanguages}
     \adcvmothertongue{Italian}
     \adcvlanguagesheader
@@ -373,11 +600,11 @@ describe him as analytical, creative, competitive, and goal-oriented.
     \adcvlanguagesfooter
     \adcvlanguagesfootnote{2}{2012 -- Trinity's Graded Examinations in Spoken English - Grade 7 (CEFR B2)}
   \end{adcvlanguages}
-\else
-  \textbf{Italian}: Native proficiency
+% \else
+  % \textbf{Italian}: Native proficiency
 
-  \textbf{English}: Full professional proficiency
-\fi
+  % \textbf{English}: Full professional proficiency
+% \fi
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
@@ -387,76 +614,8 @@ describe him as analytical, creative, competitive, and goal-oriented.
 Science, Technology, Traveling, Playing and Listening to Music, Food, Movies,
 Trekking
 
-%------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------%
+% \ifextended
 
-\ifextended
-\vspace{3em}
-% \clearpage
-\else
-\ifpublist
-\clearpage
-\fi
-\fi
-\section{Publications}\label{sec:publications}
-
-\newcommand{\fullpublicationslist}{
-  \begin{refsection}
-    \nocite{Serra21JSA}
-    \nocite{Ara20CCIS}
-    \printbibliography[title={Peer-reviewed Journals\label{sec:journals}}, heading=subbibliography]
-  \end{refsection}
-
-  \begin{refsection}
-    \nocite{Lai21IEEENFVSDN}
-    \nocite{Serra20}
-    \nocite{Ara20CLOSER}
-    \nocite{Ara19}
-    \printbibliography[title={Peer-reviewed Conference and Workshop Proceedings\label{sec:conferences}}, heading=subbibliography]
-  \end{refsection}
-
-  \ifextended
-    \clearpage
-  \fi
-  \begin{refsection}
-    \nocite{MC2020}
-    \nocite{MF2017}
-    \nocite{MC2015}
-    \nocite{MF2014}
-    \printbibliography[title={Book Chapters\label{sec:bookchapters}}, heading=subbibliography]
-  \end{refsection}
-}
-
-\ifextended
-  \fullpublicationslist
-\else
-  \ifpublist
-    \fullpublicationslist
-  \else
-    Search me on
-    \href{htts://scholar.google.com/citations?user=nl1RmecAAAAJ}{Google Scholar}
-    for the list of my peer-reviewed conference proceedings and journals. Or
-    have a look at \href{https://gabrieleara.github.io/publications}{my
-    publications page}.
-  \fi
-\fi
-
-
-%------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------%
-
-\ifextended
-\section{Presentations}\label{sec:presentations}
-
-\begin{adcvpresentations}
-  \adcvpresentation{On the Use of Kernel Bypass Mechanisms for High-Performance
-    Inter-container Communications}{Frankfurt, Germany, June 20, 2019}
-
-  \adcvpresentation{Comparative Evaluation of Kernel Bypass Mechanisms for
-    High-performance Inter-container Communications}{
-      \href{https://www.youtube.com/watch?v=cQ3ecv6TVZc}{[Online on YouTube]}
-    Prague, Czech Republic, May 7, 2020}
-\end{adcvpresentations}
-\fi
+% \fi
 
 \end{document}
